@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const router = require("./routes/todoRoutes");
 const live_url = process.env.LIVE_URL;
 const local_url = process.env.LOCAL_URL;
-mongoose.connect(local_url)
+mongoose.connect(live_url)
 .then(()=> console.log("MongoDB connected"))
 .catch((err)=> console.error("Connection error",err));
 
